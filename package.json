@@ -1,0 +1,16 @@
+{
+  "name": "@stein197/rot13",
+  "version": "1.0.0",
+  "description": "ROT13 cipher algorithm implementation",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "rot13",
+    "cipher",
+    "algorithm"
+  ],
+  "author": "Nail Gafarov <nil20122013@gmail.com>",
+  "license": "MIT"
+}
