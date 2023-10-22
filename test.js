@@ -2,8 +2,8 @@ const rot13 = require(".");
 const assert = require("node:assert");
 
 const result = {
-	fail: [],
-	pass: []
+	fail: 0,
+	pass: 0
 };
 for (const [desc, cb] of Object.entries({
 	"Should return empty string when an empty string is passed": () => assert.equal(rot13(""), ""),
@@ -14,11 +14,11 @@ for (const [desc, cb] of Object.entries({
 })) {
 	try {
 		cb();
-		result.pass.push(desc);
+		result.pass++;
 		console.log(`[PASS]: ${desc}`);
 	} catch {
-		result.fail.push(desc);
+		result.fail++;
 		console.log(`[FAIL]: ${desc}`);
 	}
 }
-console.log(`Failed: ${result.fail.length}, Passed: ${result.pass.length}`);
+console.log(`Failed: ${result.fail}, Passed: ${result.pass}`);
